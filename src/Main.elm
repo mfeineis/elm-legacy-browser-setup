@@ -2,6 +2,7 @@ port module Main exposing (main, reactor)
 
 import Html exposing (Html)
 import Html.Events as Events
+import Http
 import Json.Decode as Decode exposing (Decoder, Value)
 import Json.Encode as Encode
 
@@ -16,7 +17,12 @@ type Msg
     = Decrement
     | Incoming Value
     | Increment
+    | ReceivedSomeData (Result Http.Error SomeData)
 
+
+type alias SomeData =
+    { some : String
+    }
 
 type alias Model =
     Int
@@ -67,11 +73,21 @@ subscriptions model =
         ]
 
 
+decodeSomeData : Decoder SomeData
+decodeSomeData =
+    Decode.map SomeData
+        (Decode.field "some" Decode.string)
+
+
 init : Value -> ( Model, Cmd Msg )
 init flags =
     case Decode.decodeValue flagsDecoder flags of
         Ok { initialCounter } ->
-            ( initialCounter, Cmd.none )
+            let
+                request =
+                    Http.get "/assets/some-data.json" decodeSomeData
+            in
+            ( initialCounter, Http.send ReceivedSomeData request )
 
         Err reason ->
             Debug.log ("Flags could not be decoded: " ++ reason)
@@ -99,6 +115,18 @@ update msg counter =
 
         Increment ->
             ( counter + 1, Cmd.none )
+
+
+        ReceivedSomeData result ->
+            case result of
+                Ok { some } ->
+                    Debug.log ("[Elm] received: " ++ toString result)
+                        ( counter, Cmd.none )
+
+                Err httpError ->
+                    Debug.log
+                        ("[Elm] error decoding some data: " ++ toString httpError)
+                        ( counter, Cmd.none )
 
 
 view : Model -> Html Msg
