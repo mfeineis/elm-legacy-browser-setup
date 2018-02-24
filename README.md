@@ -62,14 +62,14 @@ that have been
   JS files within your project, including the Elm generated JS. This setup tries
   to auto-magically prevent you from committing code that isn't up to your
   `browserslist` configuration. You are encouraged to include stricter `eslint` 
-  configuration, of course ;-)
+  configuration, of course 😉
 * A **very** basic `index.html` entry point that includes all the stuff necessary
   in the easiest way possible via `<script>` tags for demo purposes. You are free 
   to use whatever bundler you want in your real-world app
   
 ## TODO
 
-* [x] Check that it's actually working on Windows in a real IE xD - it does on my Win10 aka "Works On My Machine" (tm) - you might want to check this with a *real* browser in a VM via [modern.ie](https://modern.ie), though. I don't want and need to :-)
+* [x] Check that it's actually working on Windows in a real IE xD - it does on my Win10 aka "Works On My Machine" (tm) - you might want to check this with a *real* browser in a VM via [modern.ie](https://modern.ie), though. I don't want and need to 🤗
 * [x] Find a way to polyfill the W3C event model which right now is preventing us from
     going down to IE8+ or even lower - yeah, thanks Eiric Backer
 * [x] Add a working example that includes basic user interaction - counter is working
