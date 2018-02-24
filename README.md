@@ -14,7 +14,7 @@ to maintain this as a project for myself, I'm open to pull-requests that improve
 upon the basic setup. So code contributions are welcome, I don't plan to process 
 issues on Github, though, so please refrain from feature requests or the like. This
 is a fun one-day project and maintaining IE related stuff is not covered by my
-definition of fun :-P.
+definition of fun 😙.
 
 ## Building
 
