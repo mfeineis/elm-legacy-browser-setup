@@ -1,12 +1,14 @@
 {
   "name": "elm-legacy-browser-setup",
-  "version": "0.3.0",
-  "description": "A minimal Elm setup that supports IE9+",
+  "version": "1.0.0",
+  "description": "A minimal Elm 0.18 setup that supports IE8+",
   "main": "index.js",
   "scripts": {
-    "build": "elm make src/Main.elm --output=dist/app.js",
+    "build": "elm make src/Main.elm --output=dist/app.js --yes",
+    "dev": "elm reactor -p 8080",
     "lint": "eslint .",
-    "start": "http-server -p 8081 .",
+    "setup": "npm i && npm start",
+    "start": "npm run build && http-server -p 8081 .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {

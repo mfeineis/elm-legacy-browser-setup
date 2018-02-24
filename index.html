@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Note the HTML5 doctype! This is NOT optional for IE -->
     <meta charset="utf-8">
     <title>Elm 0.18 Legacy Browser Setup</title>
 </head>
+
 <body>
     <!-- Note that older browsers may need the `type` attribute -->
     <!-- This is using simple script tags, you're free to use your bundling tool of choice, of course -->
@@ -11,17 +14,30 @@
     <!-- NPM polyfills -->
     <script type="text/javascript" src="./node_modules/console-polyfill/index.js"></script>
 
-    <!-- Nobody supplies these kind of polyfills via a package manager so this is old-school copy&paste from MDN  -->
+    <!-- Nobody supplies these kind of polyfills via a package manager so this is old-school copy&paste from MDN and others, licenses are included in source or are linked from there -->
     <script type="text/javascript" src="./polyfills/array-index-of.js"></script>
     <script type="text/javascript" src="./polyfills/string-trim.js"></script>
+    <script type="text/javascript" src="./polyfills/add-event-listener.js"></script>
+
+    <!-- The original JSON by Douglas Crockford -->
+    <script type="text/javascript" src="./polyfills/json2.js"></script>
 
     <!-- Include your Elm app *after* the polyfills -->
     <script type="text/javascript" src="./dist/app.js"></script>
     <script type="text/javascript">
 
-    // Tadaaa!
-    Elm.Main.fullscreen();
+        // Tadaaa!
+        var app = Elm.Main.fullscreen({
+            initialCounter: 42
+        });
+
+        app.ports.fromElm.subscribe(function (msg) {
+            console.log("app.ports.fromElm: ", msg);
+        });
+
+        app.ports.toElm.send("Hello from ancient times!");
 
     </script>
 </body>
+
 </html>
