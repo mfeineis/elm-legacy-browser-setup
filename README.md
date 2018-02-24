@@ -9,10 +9,12 @@ Windows XP+ with Elm 0.19, we'll have to see.
 ## Disclaimer
 Before you go on taking this into the wild, wild open:
 
-Note that this is not meant as a traditional starter-kit. Although I don't intend 
+Note that this is **not meant as a traditional starter-kit**. Although I don't intend 
 to maintain this as a project for myself, I'm open to pull-requests that improve
 upon the basic setup. So code contributions are welcome, I don't plan to process 
-issues on Github, though, so please refrain from feature requests or the like.
+issues on Github, though, so please refrain from feature requests or the like. This
+is a fun one-day project and maintaining IE related stuff is not covered by my
+definition of fun :-P.
 
 ## Building
 
@@ -67,8 +69,13 @@ that have been
   
 ## TODO
 
-[x] Check that it's actually working on Windows in a real IE xD - it does on my Win10 aka "Works On My Machine" (tm) - you might want to check this with a *real* browser in a VM via [modern.ie](https://modern.ie), though. I don't want and need to :-)
-[x] Find a way to polyfill the W3C event model which right now is preventing us from
+* [x] Check that it's actually working on Windows in a real IE xD - it does on my Win10 aka "Works On My Machine" (tm) - you might want to check this with a *real* browser in a VM via [modern.ie](https://modern.ie), though. I don't want and need to :-)
+* [x] Find a way to polyfill the W3C event model which right now is preventing us from
     going down to IE8+ or even lower - yeah, thanks Eiric Backer
-[x] Add a working example that includes basic user interaction - counter is working
-[x] Expand the example to demonstrate support for JSON decoding of flags and ports
+* [x] Add a working example that includes basic user interaction - counter is working
+* [x] Expand the example to demonstrate support for JSON decoding of flags and ports
+
+Works on these machines (tm):
+
+* Ubuntu 17.10 64bit, Intel i3
+* Windows 10 64bit, Intel i7
