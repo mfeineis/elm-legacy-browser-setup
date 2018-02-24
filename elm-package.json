@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "summary": "A minimal Elm 0.18 setup that supports IE8+",
     "repository": "https://github.com/mfeineis/elm-legacy-browser-setup.git",
     "license": "MIT",

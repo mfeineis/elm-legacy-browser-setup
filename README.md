@@ -52,6 +52,8 @@ that have been
   after all - thanks to [Eiric Backer](https://qiita.com/sounisi5011/items/a8fc80e075e4f767b79a#11).
   This brings us down to maybe even IE6+
 * The [original `JSON` polyfill](https://www.json.org/), since this has been introduced in ES5
+* A [crappy handwritten proof-of-concept polyfill of XMLHttpRequest](./polyfills/xml-http-request.js)
+  since W3C XMLHttpRequest seems to be IE10+ for some reason
 * A useful basic `eslint` setup with `eslint-plugin-compat` enabled that checks
   the JS you're using against the target browsers configured in `.browserslistrc`. 
   The detection is far from perfect but it prevents you from using something
@@ -74,7 +76,7 @@ that have been
     going down to IE8+ or even lower - yeah, thanks Eiric Backer
 * [x] Add a working example that includes basic user interaction - counter is working
 * [x] Expand the example to demonstrate support for JSON decoding of flags and ports
-* [ ] Check support for Ajax calls
+* [x] Check support for Ajax calls - crappy by-hand-polyfill works with `elm-lang/http`, so PoC is done
 
 Works on these machines (tm):
 
