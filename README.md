@@ -32,7 +32,7 @@ no easy way to hook into that without using a different tool like
 
 ## Context
 This is a little experiment that sprang from
-[a "How do I support IE<11" thread on Elm Discourse](https://discourse.elm-lang.org/t/elm-support-for-older-browsers-ie-9-10/744).
+[a "How do I support IE<11" thread on Elm Discourse](https://discourse.elm-lang.org/t/elm-support-for-older-browsers-ie-9-10/744) that has also been published [on my personal blog](http://canena.de/blog/2018-02-24-an-elm-to-the-past).
 
 Personally I just wanted to explore how far in the past we can transport Elm with
 polyfills alone. A nice side-effect of that endeavor is that people can use this 
