@@ -1,0 +1,3 @@
+# Note that eslint doesn't ignore the dist directory while .gitignore does
+elm-stuff/
+node_modules/

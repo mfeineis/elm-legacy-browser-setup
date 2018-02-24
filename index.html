@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Elm 0.18 Legacy Browser Setup</title>
+</head>
+<body>
+    <!-- Note that older browsers may need the `type` attribute -->
+    <!-- This is using simple script tags, you're free to use your bundling tool of choice, of course -->
+
+    <!-- NPM polyfills -->
+    <script type="application/javascript" src="./node_modules/console-polyfill/index.js"></script>
+
+    <!-- Nobody supplies these kind of polyfills via a package manager so this is old-school copy&paste from MDN  -->
+    <script type="application/javascript" src="./polyfills/array-index-of.js"></script>
+    <script type="application/javascript" src="./polyfills/string-trim.js"></script>
+
+    <!-- Include your Elm app *after* the polyfills -->
+    <script type="application/javascript" src="./dist/app.js"></script>
+    <script type="application/javascript">
+
+    // Tadaaa!
+    Elm.Main.fullscreen();
+
+    </script>
+</body>
+</html>

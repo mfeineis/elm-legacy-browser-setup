@@ -1,0 +1,43 @@
+{
+  "name": "elm-legacy-browser-setup",
+  "version": "0.3.0",
+  "description": "A minimal Elm setup that supports IE9+",
+  "main": "index.js",
+  "scripts": {
+    "build": "elm make src/Main.elm --output=dist/app.js",
+    "lint": "eslint .",
+    "start": "http-server -p 8081 .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfeineis/elm-legacy-browser-setup.git"
+  },
+  "keywords": [
+    "elm",
+    "internet-explorer",
+    "legacy-browser"
+  ],
+  "author": "Martin Feineis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mfeineis/elm-legacy-browser-setup/issues"
+  },
+  "homepage": "https://github.com/mfeineis/elm-legacy-browser-setup#readme",
+  "devDependencies": {
+    "browserslist": "^3.1.1",
+    "elm": "^0.18.0",
+    "eslint": "^4.18.1",
+    "eslint-plugin-compat": "^2.2.0",
+    "http-server": "^0.11.1",
+    "husky": "^0.15.0-rc.8"
+  },
+  "dependencies": {
+    "console-polyfill": "^0.3.0"
+  }
+}
