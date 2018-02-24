@@ -74,6 +74,7 @@ that have been
     going down to IE8+ or even lower - yeah, thanks Eiric Backer
 * [x] Add a working example that includes basic user interaction - counter is working
 * [x] Expand the example to demonstrate support for JSON decoding of flags and ports
+* [ ] Check support for Ajax calls
 
 Works on these machines (tm):
 
